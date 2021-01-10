@@ -67,6 +67,7 @@ class NatureElves(ElvesMachine):
         super(NatureElves, self).__init__()
         self.skill = skillDictionary[self.attributes][self.level]
         self.hp = self.hp * 1.5
+        self.consthp = self.hp
         self.catch = 1 / self.IQ
 
     def battle(self, enemy, numberOfSkill=0):
@@ -89,10 +90,13 @@ class NatureElves(ElvesMachine):
 
 
 class HumanElves(NatureElves):
-    def __init__(self, owner="OS", name="samllHong"):
+    def __init__(self, owner="OS", name="samllHong", hp="-1"):
         super(HumanElves, self).__init__()
         self.__owner = owner
-        self.__hp = self.hp / 1.5
+        if hp == -1:
+            self.__hp = self.hp / 1.5
+        else:
+            self.__hp = hp / 1.5
         self.__name = name
         self.__learn = 1
         self.skill = []
