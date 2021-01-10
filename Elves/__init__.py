@@ -141,14 +141,7 @@ class HumanElves(NatureElves):
     def __win(self):
         self.__learn += 1
 
-
-# TODO : 人物类
-# TODO : 模块名
-# TODO : 地图类
-# TODO : 战斗设计
-b = NatureElves()
-a = NatureElves()
-
-print(b.hp)
-a.battle(b)
-print(b.hp)
+# TODO  模块名
+# TODO  地图类
+# TODO  战斗设计
+# TODO  模块调用
